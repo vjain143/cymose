@@ -1,4 +1,4 @@
-package com.cymose.stix.sdk.model;
+package com.cymose.stix.sdk.model.sdo;
 
 import com.cymose.stix.sdk.model.cdt.ExternalReference;
 import com.cymose.stix.sdk.model.sdm.GranularMarking;
@@ -9,7 +9,26 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class StixCommonDataAttributes {
+public class Campaign {
+    @SerializedName("name")
+    private String name = null;
+
+    @SerializedName("description")
+    private String description = null;
+
+    @SerializedName("aliases")
+
+    private List<String> aliases = null;
+
+    @SerializedName("first_seen")
+    private OffsetDateTime firstSeen = null;
+
+    @SerializedName("last_seen")
+    private OffsetDateTime lastSeen = null;
+
+    @SerializedName("objective")
+    private String objective = null;
+
     @SerializedName("created")
     private OffsetDateTime created = null;
 
@@ -23,30 +42,107 @@ public class StixCommonDataAttributes {
     private Boolean revoked = false;
 
     @SerializedName("labels")
-
     private List<String> labels = null;
 
     @SerializedName("external_references")
-
     private List<ExternalReference> externalReferences = null;
 
     @SerializedName("object_marking_refs")
-
     private List<String> objectMarkingRefs = null;
 
     @SerializedName("granular_markings")
-
     private List<GranularMarking> granularMarkings = null;
 
-    public StixCommonDataAttributes created(OffsetDateTime created) {
-        this.created = created;
+    public Campaign name(String name) {
+        this.name = name;
         return this;
     }
 
-    /**
-     * Get created
-     * @return created
-     **/
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Campaign description(String description) {
+        this.description = description;
+        return this;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Campaign aliases(List<String> aliases) {
+        this.aliases = aliases;
+        return this;
+    }
+
+    public Campaign addAliasesItem(String aliasesItem) {
+        if (this.aliases == null) {
+            this.aliases = new ArrayList<String>();
+        }
+        this.aliases.add(aliasesItem);
+        return this;
+    }
+
+    public List<String> getAliases() {
+        return aliases;
+    }
+
+    public void setAliases(List<String> aliases) {
+        this.aliases = aliases;
+    }
+
+    public Campaign firstSeen(OffsetDateTime firstSeen) {
+        this.firstSeen = firstSeen;
+        return this;
+    }
+
+    public OffsetDateTime getFirstSeen() {
+        return firstSeen;
+    }
+
+    public void setFirstSeen(OffsetDateTime firstSeen) {
+        this.firstSeen = firstSeen;
+    }
+
+    public Campaign lastSeen(OffsetDateTime lastSeen) {
+        this.lastSeen = lastSeen;
+        return this;
+    }
+
+    public OffsetDateTime getLastSeen() {
+        return lastSeen;
+    }
+
+    public void setLastSeen(OffsetDateTime lastSeen) {
+        this.lastSeen = lastSeen;
+    }
+
+    public Campaign objective(String objective) {
+        this.objective = objective;
+        return this;
+    }
+
+    public String getObjective() {
+        return objective;
+    }
+
+    public void setObjective(String objective) {
+        this.objective = objective;
+    }
+
+    public Campaign created(OffsetDateTime created) {
+        this.created = created;
+        return this;
+    }
 
     public OffsetDateTime getCreated() {
         return created;
@@ -56,15 +152,10 @@ public class StixCommonDataAttributes {
         this.created = created;
     }
 
-    public StixCommonDataAttributes createdByRef(String createdByRef) {
+    public Campaign createdByRef(String createdByRef) {
         this.createdByRef = createdByRef;
         return this;
     }
-
-    /**
-     * Get createdByRef
-     * @return createdByRef
-     **/
 
     public String getCreatedByRef() {
         return createdByRef;
@@ -74,15 +165,10 @@ public class StixCommonDataAttributes {
         this.createdByRef = createdByRef;
     }
 
-    public StixCommonDataAttributes modified(OffsetDateTime modified) {
+    public Campaign modified(OffsetDateTime modified) {
         this.modified = modified;
         return this;
     }
-
-    /**
-     * Get modified
-     * @return modified
-     **/
 
     public OffsetDateTime getModified() {
         return modified;
@@ -92,15 +178,10 @@ public class StixCommonDataAttributes {
         this.modified = modified;
     }
 
-    public StixCommonDataAttributes revoked(Boolean revoked) {
+    public Campaign revoked(Boolean revoked) {
         this.revoked = revoked;
         return this;
     }
-
-    /**
-     * Get revoked
-     * @return revoked
-     **/
 
     public Boolean isRevoked() {
         return revoked;
@@ -110,23 +191,18 @@ public class StixCommonDataAttributes {
         this.revoked = revoked;
     }
 
-    public StixCommonDataAttributes labels(List<String> labels) {
+    public Campaign labels(List<String> labels) {
         this.labels = labels;
         return this;
     }
 
-    public StixCommonDataAttributes addLabelsItem(String labelsItem) {
+    public Campaign addLabelsItem(String labelsItem) {
         if (this.labels == null) {
             this.labels = new ArrayList<String>();
         }
         this.labels.add(labelsItem);
         return this;
     }
-
-    /**
-     * Get labels
-     * @return labels
-     **/
 
     public List<String> getLabels() {
         return labels;
@@ -136,23 +212,18 @@ public class StixCommonDataAttributes {
         this.labels = labels;
     }
 
-    public StixCommonDataAttributes externalReferences(List<ExternalReference> externalReferences) {
+    public Campaign externalReferences(List<ExternalReference> externalReferences) {
         this.externalReferences = externalReferences;
         return this;
     }
 
-    public StixCommonDataAttributes addExternalReferencesItem(ExternalReference externalReferencesItem) {
+    public Campaign addExternalReferencesItem(ExternalReference externalReferencesItem) {
         if (this.externalReferences == null) {
             this.externalReferences = new ArrayList<ExternalReference>();
         }
         this.externalReferences.add(externalReferencesItem);
         return this;
     }
-
-    /**
-     * Get externalReferences
-     * @return externalReferences
-     **/
 
     public List<ExternalReference> getExternalReferences() {
         return externalReferences;
@@ -162,23 +233,18 @@ public class StixCommonDataAttributes {
         this.externalReferences = externalReferences;
     }
 
-    public StixCommonDataAttributes objectMarkingRefs(List<String> objectMarkingRefs) {
+    public Campaign objectMarkingRefs(List<String> objectMarkingRefs) {
         this.objectMarkingRefs = objectMarkingRefs;
         return this;
     }
 
-    public StixCommonDataAttributes addObjectMarkingRefsItem(String objectMarkingRefsItem) {
+    public Campaign addObjectMarkingRefsItem(String objectMarkingRefsItem) {
         if (this.objectMarkingRefs == null) {
             this.objectMarkingRefs = new ArrayList<String>();
         }
         this.objectMarkingRefs.add(objectMarkingRefsItem);
         return this;
     }
-
-    /**
-     * Get objectMarkingRefs
-     * @return objectMarkingRefs
-     **/
 
     public List<String> getObjectMarkingRefs() {
         return objectMarkingRefs;
@@ -188,23 +254,18 @@ public class StixCommonDataAttributes {
         this.objectMarkingRefs = objectMarkingRefs;
     }
 
-    public StixCommonDataAttributes granularMarkings(List<GranularMarking> granularMarkings) {
+    public Campaign granularMarkings(List<GranularMarking> granularMarkings) {
         this.granularMarkings = granularMarkings;
         return this;
     }
 
-    public StixCommonDataAttributes addGranularMarkingsItem(GranularMarking granularMarkingsItem) {
+    public Campaign addGranularMarkingsItem(GranularMarking granularMarkingsItem) {
         if (this.granularMarkings == null) {
             this.granularMarkings = new ArrayList<GranularMarking>();
         }
         this.granularMarkings.add(granularMarkingsItem);
         return this;
     }
-
-    /**
-     * Get granularMarkings
-     * @return granularMarkings
-     **/
 
     public List<GranularMarking> getGranularMarkings() {
         return granularMarkings;
@@ -222,27 +283,39 @@ public class StixCommonDataAttributes {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        StixCommonDataAttributes stixCommonDataAttributes = (StixCommonDataAttributes) o;
-        return Objects.equals(this.created, stixCommonDataAttributes.created) &&
-                Objects.equals(this.createdByRef, stixCommonDataAttributes.createdByRef) &&
-                Objects.equals(this.modified, stixCommonDataAttributes.modified) &&
-                Objects.equals(this.revoked, stixCommonDataAttributes.revoked) &&
-                Objects.equals(this.labels, stixCommonDataAttributes.labels) &&
-                Objects.equals(this.externalReferences, stixCommonDataAttributes.externalReferences) &&
-                Objects.equals(this.objectMarkingRefs, stixCommonDataAttributes.objectMarkingRefs) &&
-                Objects.equals(this.granularMarkings, stixCommonDataAttributes.granularMarkings);
+        Campaign campaign = (Campaign) o;
+        return Objects.equals(this.name, campaign.name) &&
+                Objects.equals(this.description, campaign.description) &&
+                Objects.equals(this.aliases, campaign.aliases) &&
+                Objects.equals(this.firstSeen, campaign.firstSeen) &&
+                Objects.equals(this.lastSeen, campaign.lastSeen) &&
+                Objects.equals(this.objective, campaign.objective) &&
+                Objects.equals(this.created, campaign.created) &&
+                Objects.equals(this.createdByRef, campaign.createdByRef) &&
+                Objects.equals(this.modified, campaign.modified) &&
+                Objects.equals(this.revoked, campaign.revoked) &&
+                Objects.equals(this.labels, campaign.labels) &&
+                Objects.equals(this.externalReferences, campaign.externalReferences) &&
+                Objects.equals(this.objectMarkingRefs, campaign.objectMarkingRefs) &&
+                Objects.equals(this.granularMarkings, campaign.granularMarkings);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(created, createdByRef, modified, revoked, labels, externalReferences, objectMarkingRefs, granularMarkings);
+        return Objects.hash(name, description, aliases, firstSeen, lastSeen, objective, created, createdByRef, modified, revoked, labels, externalReferences, objectMarkingRefs, granularMarkings);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("class StixCommonDataAttributes {\n");
+        sb.append("class Campaign {\n");
 
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    description: ").append(toIndentedString(description)).append("\n");
+        sb.append("    aliases: ").append(toIndentedString(aliases)).append("\n");
+        sb.append("    firstSeen: ").append(toIndentedString(firstSeen)).append("\n");
+        sb.append("    lastSeen: ").append(toIndentedString(lastSeen)).append("\n");
+        sb.append("    objective: ").append(toIndentedString(objective)).append("\n");
         sb.append("    created: ").append(toIndentedString(created)).append("\n");
         sb.append("    createdByRef: ").append(toIndentedString(createdByRef)).append("\n");
         sb.append("    modified: ").append(toIndentedString(modified)).append("\n");

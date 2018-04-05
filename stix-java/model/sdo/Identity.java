@@ -1,4 +1,4 @@
-package com.cymose.stix.sdk.model;
+package com.cymose.stix.sdk.model.sdo;
 
 import com.cymose.stix.sdk.model.cdt.ExternalReference;
 import com.cymose.stix.sdk.model.sdm.GranularMarking;
@@ -9,7 +9,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class StixCommonDataAttributes {
+public class Identity {
+    @SerializedName("name")
+    private String name = null;
+
+    @SerializedName("description")
+    private String description = null;
+
+    @SerializedName("identity_class")
+    private String identityClass = null;
+
+    @SerializedName("sectors")
+
+    private List<String> sectors = null;
+
+    @SerializedName("contact_information")
+    private String contactInformation = null;
+
     @SerializedName("created")
     private OffsetDateTime created = null;
 
@@ -23,22 +39,116 @@ public class StixCommonDataAttributes {
     private Boolean revoked = false;
 
     @SerializedName("labels")
-
     private List<String> labels = null;
 
     @SerializedName("external_references")
-
     private List<ExternalReference> externalReferences = null;
 
     @SerializedName("object_marking_refs")
-
     private List<String> objectMarkingRefs = null;
 
     @SerializedName("granular_markings")
-
     private List<GranularMarking> granularMarkings = null;
 
-    public StixCommonDataAttributes created(OffsetDateTime created) {
+    public Identity name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Get name
+     * @return name
+     **/
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Identity description(String description) {
+        this.description = description;
+        return this;
+    }
+
+    /**
+     * Get description
+     * @return description
+     **/
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Identity identityClass(String identityClass) {
+        this.identityClass = identityClass;
+        return this;
+    }
+
+    /**
+     * Get identityClass
+     * @return identityClass
+     **/
+
+    public String getIdentityClass() {
+        return identityClass;
+    }
+
+    public void setIdentityClass(String identityClass) {
+        this.identityClass = identityClass;
+    }
+
+    public Identity sectors(List<String> sectors) {
+        this.sectors = sectors;
+        return this;
+    }
+
+    public Identity addSectorsItem(String sectorsItem) {
+        if (this.sectors == null) {
+            this.sectors = new ArrayList<String>();
+        }
+        this.sectors.add(sectorsItem);
+        return this;
+    }
+
+    /**
+     * Get sectors
+     * @return sectors
+     **/
+
+    public List<String> getSectors() {
+        return sectors;
+    }
+
+    public void setSectors(List<String> sectors) {
+        this.sectors = sectors;
+    }
+
+    public Identity contactInformation(String contactInformation) {
+        this.contactInformation = contactInformation;
+        return this;
+    }
+
+    /**
+     * Get contactInformation
+     * @return contactInformation
+     **/
+
+    public String getContactInformation() {
+        return contactInformation;
+    }
+
+    public void setContactInformation(String contactInformation) {
+        this.contactInformation = contactInformation;
+    }
+
+    public Identity created(OffsetDateTime created) {
         this.created = created;
         return this;
     }
@@ -56,7 +166,7 @@ public class StixCommonDataAttributes {
         this.created = created;
     }
 
-    public StixCommonDataAttributes createdByRef(String createdByRef) {
+    public Identity createdByRef(String createdByRef) {
         this.createdByRef = createdByRef;
         return this;
     }
@@ -74,7 +184,7 @@ public class StixCommonDataAttributes {
         this.createdByRef = createdByRef;
     }
 
-    public StixCommonDataAttributes modified(OffsetDateTime modified) {
+    public Identity modified(OffsetDateTime modified) {
         this.modified = modified;
         return this;
     }
@@ -92,7 +202,7 @@ public class StixCommonDataAttributes {
         this.modified = modified;
     }
 
-    public StixCommonDataAttributes revoked(Boolean revoked) {
+    public Identity revoked(Boolean revoked) {
         this.revoked = revoked;
         return this;
     }
@@ -110,12 +220,12 @@ public class StixCommonDataAttributes {
         this.revoked = revoked;
     }
 
-    public StixCommonDataAttributes labels(List<String> labels) {
+    public Identity labels(List<String> labels) {
         this.labels = labels;
         return this;
     }
 
-    public StixCommonDataAttributes addLabelsItem(String labelsItem) {
+    public Identity addLabelsItem(String labelsItem) {
         if (this.labels == null) {
             this.labels = new ArrayList<String>();
         }
@@ -136,12 +246,12 @@ public class StixCommonDataAttributes {
         this.labels = labels;
     }
 
-    public StixCommonDataAttributes externalReferences(List<ExternalReference> externalReferences) {
+    public Identity externalReferences(List<ExternalReference> externalReferences) {
         this.externalReferences = externalReferences;
         return this;
     }
 
-    public StixCommonDataAttributes addExternalReferencesItem(ExternalReference externalReferencesItem) {
+    public Identity addExternalReferencesItem(ExternalReference externalReferencesItem) {
         if (this.externalReferences == null) {
             this.externalReferences = new ArrayList<ExternalReference>();
         }
@@ -162,12 +272,12 @@ public class StixCommonDataAttributes {
         this.externalReferences = externalReferences;
     }
 
-    public StixCommonDataAttributes objectMarkingRefs(List<String> objectMarkingRefs) {
+    public Identity objectMarkingRefs(List<String> objectMarkingRefs) {
         this.objectMarkingRefs = objectMarkingRefs;
         return this;
     }
 
-    public StixCommonDataAttributes addObjectMarkingRefsItem(String objectMarkingRefsItem) {
+    public Identity addObjectMarkingRefsItem(String objectMarkingRefsItem) {
         if (this.objectMarkingRefs == null) {
             this.objectMarkingRefs = new ArrayList<String>();
         }
@@ -188,12 +298,12 @@ public class StixCommonDataAttributes {
         this.objectMarkingRefs = objectMarkingRefs;
     }
 
-    public StixCommonDataAttributes granularMarkings(List<GranularMarking> granularMarkings) {
+    public Identity granularMarkings(List<GranularMarking> granularMarkings) {
         this.granularMarkings = granularMarkings;
         return this;
     }
 
-    public StixCommonDataAttributes addGranularMarkingsItem(GranularMarking granularMarkingsItem) {
+    public Identity addGranularMarkingsItem(GranularMarking granularMarkingsItem) {
         if (this.granularMarkings == null) {
             this.granularMarkings = new ArrayList<GranularMarking>();
         }
@@ -222,27 +332,37 @@ public class StixCommonDataAttributes {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        StixCommonDataAttributes stixCommonDataAttributes = (StixCommonDataAttributes) o;
-        return Objects.equals(this.created, stixCommonDataAttributes.created) &&
-                Objects.equals(this.createdByRef, stixCommonDataAttributes.createdByRef) &&
-                Objects.equals(this.modified, stixCommonDataAttributes.modified) &&
-                Objects.equals(this.revoked, stixCommonDataAttributes.revoked) &&
-                Objects.equals(this.labels, stixCommonDataAttributes.labels) &&
-                Objects.equals(this.externalReferences, stixCommonDataAttributes.externalReferences) &&
-                Objects.equals(this.objectMarkingRefs, stixCommonDataAttributes.objectMarkingRefs) &&
-                Objects.equals(this.granularMarkings, stixCommonDataAttributes.granularMarkings);
+        Identity identity = (Identity) o;
+        return Objects.equals(this.name, identity.name) &&
+                Objects.equals(this.description, identity.description) &&
+                Objects.equals(this.identityClass, identity.identityClass) &&
+                Objects.equals(this.sectors, identity.sectors) &&
+                Objects.equals(this.contactInformation, identity.contactInformation) &&
+                Objects.equals(this.created, identity.created) &&
+                Objects.equals(this.createdByRef, identity.createdByRef) &&
+                Objects.equals(this.modified, identity.modified) &&
+                Objects.equals(this.revoked, identity.revoked) &&
+                Objects.equals(this.labels, identity.labels) &&
+                Objects.equals(this.externalReferences, identity.externalReferences) &&
+                Objects.equals(this.objectMarkingRefs, identity.objectMarkingRefs) &&
+                Objects.equals(this.granularMarkings, identity.granularMarkings);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(created, createdByRef, modified, revoked, labels, externalReferences, objectMarkingRefs, granularMarkings);
+        return Objects.hash(name, description, identityClass, sectors, contactInformation, created, createdByRef, modified, revoked, labels, externalReferences, objectMarkingRefs, granularMarkings);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("class StixCommonDataAttributes {\n");
+        sb.append("class Identity {\n");
 
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    description: ").append(toIndentedString(description)).append("\n");
+        sb.append("    identityClass: ").append(toIndentedString(identityClass)).append("\n");
+        sb.append("    sectors: ").append(toIndentedString(sectors)).append("\n");
+        sb.append("    contactInformation: ").append(toIndentedString(contactInformation)).append("\n");
         sb.append("    created: ").append(toIndentedString(created)).append("\n");
         sb.append("    createdByRef: ").append(toIndentedString(createdByRef)).append("\n");
         sb.append("    modified: ").append(toIndentedString(modified)).append("\n");

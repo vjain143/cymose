@@ -1,4 +1,4 @@
-package com.cymose.stix.sdk.model;
+package com.cymose.stix.sdk.model.sro;
 
 import com.cymose.stix.sdk.model.cdt.ExternalReference;
 import com.cymose.stix.sdk.model.sdm.GranularMarking;
@@ -9,7 +9,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class StixCommonDataAttributes {
+public class Relationship {
+    @SerializedName("relationship_type")
+    private String relationshipType = null;
+
+    @SerializedName("description")
+    private String description = null;
+
+    @SerializedName("source_ref")
+    private String sourceRef = null;
+
+    @SerializedName("target_ref")
+    private String targetRef = null;
+
     @SerializedName("created")
     private OffsetDateTime created = null;
 
@@ -23,22 +35,90 @@ public class StixCommonDataAttributes {
     private Boolean revoked = false;
 
     @SerializedName("labels")
-
     private List<String> labels = null;
 
     @SerializedName("external_references")
-
     private List<ExternalReference> externalReferences = null;
 
     @SerializedName("object_marking_refs")
-
     private List<String> objectMarkingRefs = null;
 
     @SerializedName("granular_markings")
-
     private List<GranularMarking> granularMarkings = null;
 
-    public StixCommonDataAttributes created(OffsetDateTime created) {
+    public Relationship relationshipType(String relationshipType) {
+        this.relationshipType = relationshipType;
+        return this;
+    }
+
+    /**
+     * Get relationshipType
+     * @return relationshipType
+     **/
+
+    public String getRelationshipType() {
+        return relationshipType;
+    }
+
+    public void setRelationshipType(String relationshipType) {
+        this.relationshipType = relationshipType;
+    }
+
+    public Relationship description(String description) {
+        this.description = description;
+        return this;
+    }
+
+    /**
+     * Get description
+     * @return description
+     **/
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Relationship sourceRef(String sourceRef) {
+        this.sourceRef = sourceRef;
+        return this;
+    }
+
+    /**
+     * Get sourceRef
+     * @return sourceRef
+     **/
+
+    public String getSourceRef() {
+        return sourceRef;
+    }
+
+    public void setSourceRef(String sourceRef) {
+        this.sourceRef = sourceRef;
+    }
+
+    public Relationship targetRef(String targetRef) {
+        this.targetRef = targetRef;
+        return this;
+    }
+
+    /**
+     * Get targetRef
+     * @return targetRef
+     **/
+
+    public String getTargetRef() {
+        return targetRef;
+    }
+
+    public void setTargetRef(String targetRef) {
+        this.targetRef = targetRef;
+    }
+
+    public Relationship created(OffsetDateTime created) {
         this.created = created;
         return this;
     }
@@ -56,7 +136,7 @@ public class StixCommonDataAttributes {
         this.created = created;
     }
 
-    public StixCommonDataAttributes createdByRef(String createdByRef) {
+    public Relationship createdByRef(String createdByRef) {
         this.createdByRef = createdByRef;
         return this;
     }
@@ -74,7 +154,7 @@ public class StixCommonDataAttributes {
         this.createdByRef = createdByRef;
     }
 
-    public StixCommonDataAttributes modified(OffsetDateTime modified) {
+    public Relationship modified(OffsetDateTime modified) {
         this.modified = modified;
         return this;
     }
@@ -92,7 +172,7 @@ public class StixCommonDataAttributes {
         this.modified = modified;
     }
 
-    public StixCommonDataAttributes revoked(Boolean revoked) {
+    public Relationship revoked(Boolean revoked) {
         this.revoked = revoked;
         return this;
     }
@@ -110,12 +190,12 @@ public class StixCommonDataAttributes {
         this.revoked = revoked;
     }
 
-    public StixCommonDataAttributes labels(List<String> labels) {
+    public Relationship labels(List<String> labels) {
         this.labels = labels;
         return this;
     }
 
-    public StixCommonDataAttributes addLabelsItem(String labelsItem) {
+    public Relationship addLabelsItem(String labelsItem) {
         if (this.labels == null) {
             this.labels = new ArrayList<String>();
         }
@@ -136,12 +216,12 @@ public class StixCommonDataAttributes {
         this.labels = labels;
     }
 
-    public StixCommonDataAttributes externalReferences(List<ExternalReference> externalReferences) {
+    public Relationship externalReferences(List<ExternalReference> externalReferences) {
         this.externalReferences = externalReferences;
         return this;
     }
 
-    public StixCommonDataAttributes addExternalReferencesItem(ExternalReference externalReferencesItem) {
+    public Relationship addExternalReferencesItem(ExternalReference externalReferencesItem) {
         if (this.externalReferences == null) {
             this.externalReferences = new ArrayList<ExternalReference>();
         }
@@ -162,12 +242,12 @@ public class StixCommonDataAttributes {
         this.externalReferences = externalReferences;
     }
 
-    public StixCommonDataAttributes objectMarkingRefs(List<String> objectMarkingRefs) {
+    public Relationship objectMarkingRefs(List<String> objectMarkingRefs) {
         this.objectMarkingRefs = objectMarkingRefs;
         return this;
     }
 
-    public StixCommonDataAttributes addObjectMarkingRefsItem(String objectMarkingRefsItem) {
+    public Relationship addObjectMarkingRefsItem(String objectMarkingRefsItem) {
         if (this.objectMarkingRefs == null) {
             this.objectMarkingRefs = new ArrayList<String>();
         }
@@ -188,12 +268,12 @@ public class StixCommonDataAttributes {
         this.objectMarkingRefs = objectMarkingRefs;
     }
 
-    public StixCommonDataAttributes granularMarkings(List<GranularMarking> granularMarkings) {
+    public Relationship granularMarkings(List<GranularMarking> granularMarkings) {
         this.granularMarkings = granularMarkings;
         return this;
     }
 
-    public StixCommonDataAttributes addGranularMarkingsItem(GranularMarking granularMarkingsItem) {
+    public Relationship addGranularMarkingsItem(GranularMarking granularMarkingsItem) {
         if (this.granularMarkings == null) {
             this.granularMarkings = new ArrayList<GranularMarking>();
         }
@@ -222,27 +302,35 @@ public class StixCommonDataAttributes {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        StixCommonDataAttributes stixCommonDataAttributes = (StixCommonDataAttributes) o;
-        return Objects.equals(this.created, stixCommonDataAttributes.created) &&
-                Objects.equals(this.createdByRef, stixCommonDataAttributes.createdByRef) &&
-                Objects.equals(this.modified, stixCommonDataAttributes.modified) &&
-                Objects.equals(this.revoked, stixCommonDataAttributes.revoked) &&
-                Objects.equals(this.labels, stixCommonDataAttributes.labels) &&
-                Objects.equals(this.externalReferences, stixCommonDataAttributes.externalReferences) &&
-                Objects.equals(this.objectMarkingRefs, stixCommonDataAttributes.objectMarkingRefs) &&
-                Objects.equals(this.granularMarkings, stixCommonDataAttributes.granularMarkings);
+        Relationship relationship = (Relationship) o;
+        return Objects.equals(this.relationshipType, relationship.relationshipType) &&
+                Objects.equals(this.description, relationship.description) &&
+                Objects.equals(this.sourceRef, relationship.sourceRef) &&
+                Objects.equals(this.targetRef, relationship.targetRef) &&
+                Objects.equals(this.created, relationship.created) &&
+                Objects.equals(this.createdByRef, relationship.createdByRef) &&
+                Objects.equals(this.modified, relationship.modified) &&
+                Objects.equals(this.revoked, relationship.revoked) &&
+                Objects.equals(this.labels, relationship.labels) &&
+                Objects.equals(this.externalReferences, relationship.externalReferences) &&
+                Objects.equals(this.objectMarkingRefs, relationship.objectMarkingRefs) &&
+                Objects.equals(this.granularMarkings, relationship.granularMarkings);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(created, createdByRef, modified, revoked, labels, externalReferences, objectMarkingRefs, granularMarkings);
+        return Objects.hash(relationshipType, description, sourceRef, targetRef, created, createdByRef, modified, revoked, labels, externalReferences, objectMarkingRefs, granularMarkings);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("class StixCommonDataAttributes {\n");
+        sb.append("class Relationship {\n");
 
+        sb.append("    relationshipType: ").append(toIndentedString(relationshipType)).append("\n");
+        sb.append("    description: ").append(toIndentedString(description)).append("\n");
+        sb.append("    sourceRef: ").append(toIndentedString(sourceRef)).append("\n");
+        sb.append("    targetRef: ").append(toIndentedString(targetRef)).append("\n");
         sb.append("    created: ").append(toIndentedString(created)).append("\n");
         sb.append("    createdByRef: ").append(toIndentedString(createdByRef)).append("\n");
         sb.append("    modified: ").append(toIndentedString(modified)).append("\n");

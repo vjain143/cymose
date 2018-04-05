@@ -1,4 +1,4 @@
-package com.cymose.stix.sdk.model;
+package com.cymose.stix.sdk.model.sdo;
 
 import com.cymose.stix.sdk.model.cdt.ExternalReference;
 import com.cymose.stix.sdk.model.sdm.GranularMarking;
@@ -9,7 +9,20 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class StixCommonDataAttributes {
+public class Report {
+    @SerializedName("name")
+    private String name = null;
+
+    @SerializedName("description")
+    private String description = null;
+
+    @SerializedName("published")
+    private OffsetDateTime published = null;
+
+    @SerializedName("object_refs")
+
+    private List<String> objectRefs = null;
+
     @SerializedName("created")
     private OffsetDateTime created = null;
 
@@ -23,22 +36,98 @@ public class StixCommonDataAttributes {
     private Boolean revoked = false;
 
     @SerializedName("labels")
-
     private List<String> labels = null;
 
     @SerializedName("external_references")
-
     private List<ExternalReference> externalReferences = null;
 
     @SerializedName("object_marking_refs")
-
     private List<String> objectMarkingRefs = null;
 
     @SerializedName("granular_markings")
-
     private List<GranularMarking> granularMarkings = null;
 
-    public StixCommonDataAttributes created(OffsetDateTime created) {
+    public Report name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * Get name
+     * @return name
+     **/
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Report description(String description) {
+        this.description = description;
+        return this;
+    }
+
+    /**
+     * Get description
+     * @return description
+     **/
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Report published(OffsetDateTime published) {
+        this.published = published;
+        return this;
+    }
+
+    /**
+     * Get published
+     * @return published
+     **/
+
+    public OffsetDateTime getPublished() {
+        return published;
+    }
+
+    public void setPublished(OffsetDateTime published) {
+        this.published = published;
+    }
+
+    public Report objectRefs(List<String> objectRefs) {
+        this.objectRefs = objectRefs;
+        return this;
+    }
+
+    public Report addObjectRefsItem(String objectRefsItem) {
+        if (this.objectRefs == null) {
+            this.objectRefs = new ArrayList<String>();
+        }
+        this.objectRefs.add(objectRefsItem);
+        return this;
+    }
+
+    /**
+     * Get objectRefs
+     * @return objectRefs
+     **/
+
+    public List<String> getObjectRefs() {
+        return objectRefs;
+    }
+
+    public void setObjectRefs(List<String> objectRefs) {
+        this.objectRefs = objectRefs;
+    }
+
+    public Report created(OffsetDateTime created) {
         this.created = created;
         return this;
     }
@@ -56,7 +145,7 @@ public class StixCommonDataAttributes {
         this.created = created;
     }
 
-    public StixCommonDataAttributes createdByRef(String createdByRef) {
+    public Report createdByRef(String createdByRef) {
         this.createdByRef = createdByRef;
         return this;
     }
@@ -74,7 +163,7 @@ public class StixCommonDataAttributes {
         this.createdByRef = createdByRef;
     }
 
-    public StixCommonDataAttributes modified(OffsetDateTime modified) {
+    public Report modified(OffsetDateTime modified) {
         this.modified = modified;
         return this;
     }
@@ -92,7 +181,7 @@ public class StixCommonDataAttributes {
         this.modified = modified;
     }
 
-    public StixCommonDataAttributes revoked(Boolean revoked) {
+    public Report revoked(Boolean revoked) {
         this.revoked = revoked;
         return this;
     }
@@ -110,12 +199,12 @@ public class StixCommonDataAttributes {
         this.revoked = revoked;
     }
 
-    public StixCommonDataAttributes labels(List<String> labels) {
+    public Report labels(List<String> labels) {
         this.labels = labels;
         return this;
     }
 
-    public StixCommonDataAttributes addLabelsItem(String labelsItem) {
+    public Report addLabelsItem(String labelsItem) {
         if (this.labels == null) {
             this.labels = new ArrayList<String>();
         }
@@ -136,12 +225,12 @@ public class StixCommonDataAttributes {
         this.labels = labels;
     }
 
-    public StixCommonDataAttributes externalReferences(List<ExternalReference> externalReferences) {
+    public Report externalReferences(List<ExternalReference> externalReferences) {
         this.externalReferences = externalReferences;
         return this;
     }
 
-    public StixCommonDataAttributes addExternalReferencesItem(ExternalReference externalReferencesItem) {
+    public Report addExternalReferencesItem(ExternalReference externalReferencesItem) {
         if (this.externalReferences == null) {
             this.externalReferences = new ArrayList<ExternalReference>();
         }
@@ -162,12 +251,12 @@ public class StixCommonDataAttributes {
         this.externalReferences = externalReferences;
     }
 
-    public StixCommonDataAttributes objectMarkingRefs(List<String> objectMarkingRefs) {
+    public Report objectMarkingRefs(List<String> objectMarkingRefs) {
         this.objectMarkingRefs = objectMarkingRefs;
         return this;
     }
 
-    public StixCommonDataAttributes addObjectMarkingRefsItem(String objectMarkingRefsItem) {
+    public Report addObjectMarkingRefsItem(String objectMarkingRefsItem) {
         if (this.objectMarkingRefs == null) {
             this.objectMarkingRefs = new ArrayList<String>();
         }
@@ -188,12 +277,12 @@ public class StixCommonDataAttributes {
         this.objectMarkingRefs = objectMarkingRefs;
     }
 
-    public StixCommonDataAttributes granularMarkings(List<GranularMarking> granularMarkings) {
+    public Report granularMarkings(List<GranularMarking> granularMarkings) {
         this.granularMarkings = granularMarkings;
         return this;
     }
 
-    public StixCommonDataAttributes addGranularMarkingsItem(GranularMarking granularMarkingsItem) {
+    public Report addGranularMarkingsItem(GranularMarking granularMarkingsItem) {
         if (this.granularMarkings == null) {
             this.granularMarkings = new ArrayList<GranularMarking>();
         }
@@ -222,27 +311,35 @@ public class StixCommonDataAttributes {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        StixCommonDataAttributes stixCommonDataAttributes = (StixCommonDataAttributes) o;
-        return Objects.equals(this.created, stixCommonDataAttributes.created) &&
-                Objects.equals(this.createdByRef, stixCommonDataAttributes.createdByRef) &&
-                Objects.equals(this.modified, stixCommonDataAttributes.modified) &&
-                Objects.equals(this.revoked, stixCommonDataAttributes.revoked) &&
-                Objects.equals(this.labels, stixCommonDataAttributes.labels) &&
-                Objects.equals(this.externalReferences, stixCommonDataAttributes.externalReferences) &&
-                Objects.equals(this.objectMarkingRefs, stixCommonDataAttributes.objectMarkingRefs) &&
-                Objects.equals(this.granularMarkings, stixCommonDataAttributes.granularMarkings);
+        Report report = (Report) o;
+        return Objects.equals(this.name, report.name) &&
+                Objects.equals(this.description, report.description) &&
+                Objects.equals(this.published, report.published) &&
+                Objects.equals(this.objectRefs, report.objectRefs) &&
+                Objects.equals(this.created, report.created) &&
+                Objects.equals(this.createdByRef, report.createdByRef) &&
+                Objects.equals(this.modified, report.modified) &&
+                Objects.equals(this.revoked, report.revoked) &&
+                Objects.equals(this.labels, report.labels) &&
+                Objects.equals(this.externalReferences, report.externalReferences) &&
+                Objects.equals(this.objectMarkingRefs, report.objectMarkingRefs) &&
+                Objects.equals(this.granularMarkings, report.granularMarkings);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(created, createdByRef, modified, revoked, labels, externalReferences, objectMarkingRefs, granularMarkings);
+        return Objects.hash(name, description, published, objectRefs, created, createdByRef, modified, revoked, labels, externalReferences, objectMarkingRefs, granularMarkings);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("class StixCommonDataAttributes {\n");
+        sb.append("class Report {\n");
 
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    description: ").append(toIndentedString(description)).append("\n");
+        sb.append("    published: ").append(toIndentedString(published)).append("\n");
+        sb.append("    objectRefs: ").append(toIndentedString(objectRefs)).append("\n");
         sb.append("    created: ").append(toIndentedString(created)).append("\n");
         sb.append("    createdByRef: ").append(toIndentedString(createdByRef)).append("\n");
         sb.append("    modified: ").append(toIndentedString(modified)).append("\n");

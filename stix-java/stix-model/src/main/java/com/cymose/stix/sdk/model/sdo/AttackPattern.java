@@ -1,6 +1,7 @@
-package com.cymose.stix.sdk.model;
+package com.cymose.stix.sdk.model.sdo;
 
 import com.cymose.stix.sdk.model.cdt.ExternalReference;
+import com.cymose.stix.sdk.model.cdt.KillChainPhase;
 import com.cymose.stix.sdk.model.sdm.GranularMarking;
 import com.google.gson.annotations.SerializedName;
 import org.threeten.bp.OffsetDateTime;
@@ -9,7 +10,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class StixCommonDataAttributes {
+public class AttackPattern {
+    @SerializedName("name")
+    private String name = null;
+
+    @SerializedName("description")
+    private String description = null;
+
+    @SerializedName("kill_chain_phases")
+
+    private List<KillChainPhase> killChainPhases = null;
+
     @SerializedName("created")
     private OffsetDateTime created = null;
 
@@ -23,30 +34,68 @@ public class StixCommonDataAttributes {
     private Boolean revoked = false;
 
     @SerializedName("labels")
-
     private List<String> labels = null;
 
     @SerializedName("external_references")
-
     private List<ExternalReference> externalReferences = null;
 
     @SerializedName("object_marking_refs")
-
     private List<String> objectMarkingRefs = null;
 
     @SerializedName("granular_markings")
-
     private List<GranularMarking> granularMarkings = null;
 
-    public StixCommonDataAttributes created(OffsetDateTime created) {
-        this.created = created;
+    public AttackPattern name(String name) {
+        this.name = name;
         return this;
     }
 
-    /**
-     * Get created
-     * @return created
-     **/
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public AttackPattern description(String description) {
+        this.description = description;
+        return this;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public AttackPattern killChainPhases(List<KillChainPhase> killChainPhases) {
+        this.killChainPhases = killChainPhases;
+        return this;
+    }
+
+    public AttackPattern addKillChainPhasesItem(KillChainPhase killChainPhasesItem) {
+        if (this.killChainPhases == null) {
+            this.killChainPhases = new ArrayList<KillChainPhase>();
+        }
+        this.killChainPhases.add(killChainPhasesItem);
+        return this;
+    }
+
+    public List<KillChainPhase> getKillChainPhases() {
+        return killChainPhases;
+    }
+
+    public void setKillChainPhases(List<KillChainPhase> killChainPhases) {
+        this.killChainPhases = killChainPhases;
+    }
+
+    public AttackPattern created(OffsetDateTime created) {
+        this.created = created;
+        return this;
+    }
 
     public OffsetDateTime getCreated() {
         return created;
@@ -56,15 +105,10 @@ public class StixCommonDataAttributes {
         this.created = created;
     }
 
-    public StixCommonDataAttributes createdByRef(String createdByRef) {
+    public AttackPattern createdByRef(String createdByRef) {
         this.createdByRef = createdByRef;
         return this;
     }
-
-    /**
-     * Get createdByRef
-     * @return createdByRef
-     **/
 
     public String getCreatedByRef() {
         return createdByRef;
@@ -74,15 +118,10 @@ public class StixCommonDataAttributes {
         this.createdByRef = createdByRef;
     }
 
-    public StixCommonDataAttributes modified(OffsetDateTime modified) {
+    public AttackPattern modified(OffsetDateTime modified) {
         this.modified = modified;
         return this;
     }
-
-    /**
-     * Get modified
-     * @return modified
-     **/
 
     public OffsetDateTime getModified() {
         return modified;
@@ -92,15 +131,10 @@ public class StixCommonDataAttributes {
         this.modified = modified;
     }
 
-    public StixCommonDataAttributes revoked(Boolean revoked) {
+    public AttackPattern revoked(Boolean revoked) {
         this.revoked = revoked;
         return this;
     }
-
-    /**
-     * Get revoked
-     * @return revoked
-     **/
 
     public Boolean isRevoked() {
         return revoked;
@@ -110,23 +144,18 @@ public class StixCommonDataAttributes {
         this.revoked = revoked;
     }
 
-    public StixCommonDataAttributes labels(List<String> labels) {
+    public AttackPattern labels(List<String> labels) {
         this.labels = labels;
         return this;
     }
 
-    public StixCommonDataAttributes addLabelsItem(String labelsItem) {
+    public AttackPattern addLabelsItem(String labelsItem) {
         if (this.labels == null) {
             this.labels = new ArrayList<String>();
         }
         this.labels.add(labelsItem);
         return this;
     }
-
-    /**
-     * Get labels
-     * @return labels
-     **/
 
     public List<String> getLabels() {
         return labels;
@@ -136,23 +165,18 @@ public class StixCommonDataAttributes {
         this.labels = labels;
     }
 
-    public StixCommonDataAttributes externalReferences(List<ExternalReference> externalReferences) {
+    public AttackPattern externalReferences(List<ExternalReference> externalReferences) {
         this.externalReferences = externalReferences;
         return this;
     }
 
-    public StixCommonDataAttributes addExternalReferencesItem(ExternalReference externalReferencesItem) {
+    public AttackPattern addExternalReferencesItem(ExternalReference externalReferencesItem) {
         if (this.externalReferences == null) {
             this.externalReferences = new ArrayList<ExternalReference>();
         }
         this.externalReferences.add(externalReferencesItem);
         return this;
     }
-
-    /**
-     * Get externalReferences
-     * @return externalReferences
-     **/
 
     public List<ExternalReference> getExternalReferences() {
         return externalReferences;
@@ -162,23 +186,18 @@ public class StixCommonDataAttributes {
         this.externalReferences = externalReferences;
     }
 
-    public StixCommonDataAttributes objectMarkingRefs(List<String> objectMarkingRefs) {
+    public AttackPattern objectMarkingRefs(List<String> objectMarkingRefs) {
         this.objectMarkingRefs = objectMarkingRefs;
         return this;
     }
 
-    public StixCommonDataAttributes addObjectMarkingRefsItem(String objectMarkingRefsItem) {
+    public AttackPattern addObjectMarkingRefsItem(String objectMarkingRefsItem) {
         if (this.objectMarkingRefs == null) {
             this.objectMarkingRefs = new ArrayList<String>();
         }
         this.objectMarkingRefs.add(objectMarkingRefsItem);
         return this;
     }
-
-    /**
-     * Get objectMarkingRefs
-     * @return objectMarkingRefs
-     **/
 
     public List<String> getObjectMarkingRefs() {
         return objectMarkingRefs;
@@ -188,23 +207,18 @@ public class StixCommonDataAttributes {
         this.objectMarkingRefs = objectMarkingRefs;
     }
 
-    public StixCommonDataAttributes granularMarkings(List<GranularMarking> granularMarkings) {
+    public AttackPattern granularMarkings(List<GranularMarking> granularMarkings) {
         this.granularMarkings = granularMarkings;
         return this;
     }
 
-    public StixCommonDataAttributes addGranularMarkingsItem(GranularMarking granularMarkingsItem) {
+    public AttackPattern addGranularMarkingsItem(GranularMarking granularMarkingsItem) {
         if (this.granularMarkings == null) {
             this.granularMarkings = new ArrayList<GranularMarking>();
         }
         this.granularMarkings.add(granularMarkingsItem);
         return this;
     }
-
-    /**
-     * Get granularMarkings
-     * @return granularMarkings
-     **/
 
     public List<GranularMarking> getGranularMarkings() {
         return granularMarkings;
@@ -222,27 +236,33 @@ public class StixCommonDataAttributes {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        StixCommonDataAttributes stixCommonDataAttributes = (StixCommonDataAttributes) o;
-        return Objects.equals(this.created, stixCommonDataAttributes.created) &&
-                Objects.equals(this.createdByRef, stixCommonDataAttributes.createdByRef) &&
-                Objects.equals(this.modified, stixCommonDataAttributes.modified) &&
-                Objects.equals(this.revoked, stixCommonDataAttributes.revoked) &&
-                Objects.equals(this.labels, stixCommonDataAttributes.labels) &&
-                Objects.equals(this.externalReferences, stixCommonDataAttributes.externalReferences) &&
-                Objects.equals(this.objectMarkingRefs, stixCommonDataAttributes.objectMarkingRefs) &&
-                Objects.equals(this.granularMarkings, stixCommonDataAttributes.granularMarkings);
+        AttackPattern attackPattern = (AttackPattern) o;
+        return Objects.equals(this.name, attackPattern.name) &&
+                Objects.equals(this.description, attackPattern.description) &&
+                Objects.equals(this.killChainPhases, attackPattern.killChainPhases) &&
+                Objects.equals(this.created, attackPattern.created) &&
+                Objects.equals(this.createdByRef, attackPattern.createdByRef) &&
+                Objects.equals(this.modified, attackPattern.modified) &&
+                Objects.equals(this.revoked, attackPattern.revoked) &&
+                Objects.equals(this.labels, attackPattern.labels) &&
+                Objects.equals(this.externalReferences, attackPattern.externalReferences) &&
+                Objects.equals(this.objectMarkingRefs, attackPattern.objectMarkingRefs) &&
+                Objects.equals(this.granularMarkings, attackPattern.granularMarkings);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(created, createdByRef, modified, revoked, labels, externalReferences, objectMarkingRefs, granularMarkings);
+        return Objects.hash(name, description, killChainPhases, created, createdByRef, modified, revoked, labels, externalReferences, objectMarkingRefs, granularMarkings);
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("class StixCommonDataAttributes {\n");
+        sb.append("class Web {\n");
 
+        sb.append("    name: ").append(toIndentedString(name)).append("\n");
+        sb.append("    description: ").append(toIndentedString(description)).append("\n");
+        sb.append("    killChainPhases: ").append(toIndentedString(killChainPhases)).append("\n");
         sb.append("    created: ").append(toIndentedString(created)).append("\n");
         sb.append("    createdByRef: ").append(toIndentedString(createdByRef)).append("\n");
         sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
