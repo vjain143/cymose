@@ -217,6 +217,8 @@ paths:
       operationId: submissions
       description: |
         By passing in the appropriate options, you can submit file for malware check.
+      consumes:
+      - multipart/form-data
       produces:
       - application/xml
       parameters: 
@@ -248,6 +250,16 @@ paths:
         name: timeout
         description: ""
         type: string
+      - name: additionalMetadata
+        in: formData
+        description: Additional data to pass to server
+        required: false
+        type: string
+      - name: file
+        in: formData
+        description: file to upload
+        required: false
+        type: file
       responses:
         200:
           description: respond with submission key
