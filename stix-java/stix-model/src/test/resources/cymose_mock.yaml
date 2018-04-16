@@ -23,7 +23,6 @@ paths:
     get:
       tags:
       - Mock Fireeye iSight
-      summary: searches basic
       operationId: searchBasic
       description: | 
         By passing in the appropriate options, you can search for available intelligence report in the system for searched indicator.
@@ -91,8 +90,7 @@ paths:
     post:
       tags:
       - Mock Fireeye MAS
-      summary: authentication
-      operationId: auth
+      operationId: login
       description: |
         By passing in the appropriate options, you can submit file for malware check.
       produces:
@@ -124,14 +122,19 @@ paths:
     get:
       tags:
       - Mock Fireeye MAS
-      summary: searches alerts
-      operationId: searchalerts
+      operationId: searchAlerts
       description: | 
         By passing in the appropriate options, you can search for available intelligence report in the system for searched alerts data.
       produces:
       - application/json
       - application/xml
       parameters:
+      - in: header
+        name: apiKey
+        type: string
+      - in: header
+        name: clientKey
+        type: string
       - in: query
         name: duration
         description: ""
@@ -203,7 +206,11 @@ paths:
               type: string
               description: unique key of calling client
           schema:
-            $ref: '#/definitions/Alerts'
+            type: array
+            items:
+              $ref: '#/definitions/alerts'
+            xml:
+              name: alerts
         400:
           description: bad input parameter
         401:
@@ -213,8 +220,7 @@ paths:
     post:
       tags:
       - Mock Fireeye MAS
-      summary: Submit file
-      operationId: submissions
+      operationId: submitFile
       description: |
         By passing in the appropriate options, you can submit file for malware check.
       consumes:
@@ -222,6 +228,12 @@ paths:
       produces:
       - application/xml
       parameters: 
+      - in: header
+        name: apiKey
+        type: string
+      - in: header
+        name: clientKey
+        type: string
       - in: query
         name: analysistype
         description: ""
@@ -274,13 +286,18 @@ paths:
     post:
       tags:
       - Mock Fireeye MAS
-      summary: Get status of file submitted file
-      operationId: submissionsStatus
+      operationId: getSubmissionsStatus
       description: |
         By passing in the appropriate options, you can get status of submitted file for malware check.
       produces:
       - application/xml
       parameters: 
+      - in: header
+        name: apiKey
+        type: string
+      - in: header
+        name: clientKey
+        type: string
       - in: path
         name: submissionkey
         description: ""
@@ -304,14 +321,19 @@ paths:
     post:
       tags:
       - Mock Fireeye MAS
-      summary: Get result of file submitted file
-      operationId: submissionsResult
+      operationId: getSubmissionsResult
       description: |
         By passing in the appropriate options, you can get status of submitted file for malware check.
       produces:
       - application/json
       - application/xml
       parameters: 
+      - in: header
+        name: apiKey
+        type: string
+      - in: header
+        name: clientKey
+        type: string
       - in: path
         name: submissionkey
         description: ""
@@ -321,7 +343,7 @@ paths:
         200:
           description: respond with alert result data
           schema:
-            $ref: '#/definitions/Alerts'
+            $ref: '#/definitions/alerts'
         400:
           description: bad input parameter
           
@@ -330,8 +352,6 @@ definitions:
 # Added Intelligence Report Object
   IntelligenceReport:
     type: object
-    required:
-    - reportId
     properties:
       success:
         type: boolean
@@ -379,103 +399,117 @@ definitions:
         example: "66.34.253.56"
 
 # Added Alerts Object
-  Alerts:
+  dst:
     type: object
     properties:
-      alerts:
-        type: object
-        properties:
-          alert:
-            type: object
-            properties:
-              explanation:
-                type: object
-                properties:
-                  malware-detected:
-                    type: object
-                    properties:
-                      malware:
-                        type: object
-                        properties:
-                          downloaded-at: 
-                            type: string
-                            example : "2013-10-25T18:07:22Z"
-                          md5sum:
-                            type: string
-                            example: "dcccec58a8979c5a3949c82a79267250"
-                          original:
-                            type: string
-                            example: "VoiceMail_Houston_(713)4582949.zip"
-                          http-header: 
-                            type: string 
-                            example: "GET /malware/VoiceMail_Houston_(713)4582949.zip HTTP/1.0\nUser-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)\nAccept: */*\nHost: xabean.com\nConnection: Keep-Alive\n\nHTTP/1.1 200 OK\nDate: Fri, 25 Oct 2013 18:07:21 GMT\nServer: TI-99/4A (Unix)\nLast-Modified: Fri, 25 Oct 2013 18:06:06 GMT\nETag: \"361c23-14d75-526ab30e\"\nAccept-Ranges: bytes\nContent-Length: 85365\nContent-Type: application/zip\nConnection: close\nAge: 0"
-                          profile: 
-                            type: string
-                            example: "win7-sp1"
-                          executed-at: 
-                            type: string
-                            example: "2013-10-25T18:09:26Z"
-                          application: 
-                            type: string
-                            example: "explorer"
-                          _name: 
-                            type: string
-                            example: "Malware.archive"
-                          _stype: 
-                            type: string
-                            example: "archive"
-                          _type:
-                            type: string
-                            example: "zip"
-                  _analysis:
-                    type: string
-                    example: "content"
-                  _protocol: 
-                    type: string
-                    example: "tcp"    
-              src:
-                type: object
-                properties:
-                  ip:
-                    type: string
-                    example: "10.10.20.30"
-                  host: 
-                    type: string
-                    example: "malware.sandbox.example.com"
-                  port: 
-                    type: string
-                    example: "50130"
-                  _vlan: 
-                    type: string
-                    example: "900"
-              dst:
-                type: object
-                properties:
-                  ip:
-                    type: string
-                    example : "222.222.222.222"
-                  port: 
-                    type: string
-                    example : "80"
-              occurred: 
-                type: string
-                example : "2013-10-25T18:09:25Z"
-              alert-url: 
-                type: string
-                example : "https://fireeye.example.com/event_stream/events_for_bot?ma_id=1694304"
-              action: 
-                type: string
-                example: "notified"
-              _id: 
-                type: string
-                example: "1694304"
-              _name: 
-                type: string
-                example: "malware-object"
-              _severity: 
-                type: string
-                example: "majr"    
-                
+      ip:
+        type: string
+        example : "222.222.222.222"
+      port: 
+        type: string
+        example : "80"
+  src:
+    type: object
+    properties:
+      ip:
+        type: string
+        example: "10.10.20.30"
+      host: 
+        type: string
+        example: "malware.sandbox.example.com"
+      port: 
+        type: string
+        example: "50130"
+      _vlan: 
+        type: string
+        example: "900"
+  
+  malware:
+    type: object
+    properties:
+      downloaded-at: 
+        type: string
+        example : "2013-10-25T18:07:22Z"
+      md5sum:
+        type: string
+        example: "dcccec58a8979c5a3949c82a79267250"
+      original:
+        type: string
+        example: "VoiceMail_Houston_(713)4582949.zip"
+      http-header: 
+        type: string 
+        example: "GET /malware/VoiceMail_Houston_(713)4582949.zip HTTP/1.0\nUser-Agent: Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)\nAccept: */*\nHost: xabean.com\nConnection: Keep-Alive\n\nHTTP/1.1 200 OK\nDate: Fri, 25 Oct 2013 18:07:21 GMT\nServer: TI-99/4A (Unix)\nLast-Modified: Fri, 25 Oct 2013 18:06:06 GMT\nETag: \"361c23-14d75-526ab30e\"\nAccept-Ranges: bytes\nContent-Length: 85365\nContent-Type: application/zip\nConnection: close\nAge: 0"
+      profile: 
+        type: string
+        example: "win7-sp1"
+      executed-at: 
+        type: string
+        example: "2013-10-25T18:09:26Z"
+      application: 
+        type: string
+        example: "explorer"
+      _name: 
+        type: string
+        example: "Malware.archive"
+      _stype: 
+        type: string
+        example: "archive"
+      _type:
+        type: string
+        example: "zip"
+  
+  malware-detected:
+    type: object
+    properties:
+      malware:
+        $ref: '#/definitions/malware'
+  
+  explanation:
+    type: object
+    properties:
+      malware-detected:
+        $ref: '#/definitions/malware-detected'
+      _analysis:
+        type: string
+        example: "content"
+      _protocol: 
+        type: string
+        example: "tcp"
+  
+  alert:
+    properties:
+      explanation:
+        $ref: '#/definitions/explanation'
+      src:
+        $ref: '#/definitions/src'
+      dst:
+        $ref: '#/definitions/dst'
+      occurred: 
+        type: string
+        example : "2013-10-25T18:09:25Z"
+      alert-url: 
+        type: string
+        example : "https://fireeye.example.com/event_stream/events_for_bot?ma_id=1694304"
+      action: 
+        type: string
+        example: "notified"
+      _id: 
+        type: string
+        example: "1694304"
+      _name: 
+        type: string
+        example: "malware-object"
+      _severity: 
+        type: string
+        example: "majr" 
+        
+  alerts:
+    type: object
+    xml:
+      name: alerts
+    properties:
+      alert:
+        $ref: '#/definitions/alert'
 # Added by API Auto Mocking Plugin
 host: virtserver.swaggerhub.com
 # basePath: /vjain1435/cymose/1.0.0
