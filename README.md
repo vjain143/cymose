@@ -6,3 +6,7 @@ This is just for learning STIX - Step by Step.
 I am trying to solve below listed problems :- 
 * Create STIX Objects
 * Parse STIX Objects
+
+Other references
+* Fire Eye - https://github.com/warewolf/fireeye
+* 
