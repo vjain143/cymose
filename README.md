@@ -10,3 +10,4 @@ I am trying to solve below listed problems :-
 Other references
 * Fire Eye - https://github.com/warewolf/fireeye
 * Fire Eye XML 2 STIX 1.0 - https://github.com/trolldbois/fexml2stix
+* Fire Eye IOC - https://github.com/fireeye/iocs
