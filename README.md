@@ -12,3 +12,6 @@ Other references
 * Fire Eye XML 2 STIX 1.0 - https://github.com/trolldbois/fexml2stix
 * Fire Eye IOC - https://github.com/fireeye/iocs
 * Fire Eye to MISP - https://github.com/deralexxx/FireMISP
+
+Other Free Sources
+* https://www.hybrid-analysis.com/sample/3fdc46408cd9ae1b271dc7b5d03ebcab625a3338114074257e2246ccd5f30883?environmentId=200
