@@ -11,11 +11,5 @@
 
     <modules>
         <module>stix-model</module>
-        <!--<module>stix-parser</module> -->
     </modules>
-
-
-
-
-
 </project>

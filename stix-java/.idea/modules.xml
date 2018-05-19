@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/stix-model/stix-data.iml" filepath="$PROJECT_DIR$/stix-model/stix-data.iml" />
       <module fileurl="file://$PROJECT_DIR$/stix-java.iml" filepath="$PROJECT_DIR$/stix-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/stix-model/stix-model.iml" filepath="$PROJECT_DIR$/stix-model/stix-model.iml" />
     </modules>
