@@ -4,18 +4,10 @@
   "title": "windows-registry-key",
   "description": "The Registry Key Object represents the properties of a Windows registry key.",
   "type": "object",
-  "allOf": [
-    {
-      "$ref": "../common/cyber-observable-core.json"
-    },
-    {
-      "properties": {
+  "properties": {
         "type": {
           "type": "string",
-          "description": "The value of this property MUST be `windows-registry-key`.",
-          "enum": [
-            "windows-registry-key"
-          ]
+          "description": "The value of this property MUST be `windows-registry-key`."
         },
         "key": {
           "type": "string",
@@ -41,9 +33,7 @@
           "type": "integer",
           "description": "Specifies the number of subkeys contained under the registry key."
         }
-      }
-    }
-  ],
+      },
   "required": [
     "key"
   ],

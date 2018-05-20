@@ -4,18 +4,10 @@
   "title": "x509-certificate",
   "description": "The X509 Certificate Object represents the properties of an X.509 certificate.",
   "type": "object",
-  "allOf": [
-    {
-      "$ref": "../common/cyber-observable-core.json"
-    },
-    {
-      "properties": {
+  "properties": {
         "type": {
           "type": "string",
-          "description": "The value of this property MUST be `x509-certificate`.",
-          "enum": [
-            "x509-certificate"
-          ]
+          "description": "The value of this property MUST be `x509-certificate`."
         },
         "is_self_signed": {
           "type": "boolean",
@@ -69,25 +61,21 @@
           "$ref": "#/definitions/x509-v3-extensions-type",
           "description": "Specifies any standard X.509 v3 extensions that may be used in the certificate."
         }
-      }
-    },
-    {
-      "anyOf": [
-        { "required": ["is_self_signed"] },
-        { "required": ["hashes"] },
-        { "required": ["version"] },
-        { "required": ["serial_number"] },
-        { "required": ["signature_algorithm"] },
-        { "required": ["issuer"] },
-        { "required": ["validity_not_before"] },
-        { "required": ["validity_not_after"] },
-        { "required": ["subject"] },
-        { "required": ["subject_public_key_algorithm"] },
-        { "required": ["subject_public_key_modulus"] },
-        { "required": ["subject_public_key_exponent"] },
-        { "required": ["x509_v3_extensions"] }
-      ]
-    }
+      },
+  "anyOf": [
+    { "required": ["is_self_signed"] },
+    { "required": ["hashes"] },
+    { "required": ["version"] },
+    { "required": ["serial_number"] },
+    { "required": ["signature_algorithm"] },
+    { "required": ["issuer"] },
+    { "required": ["validity_not_before"] },
+    { "required": ["validity_not_after"] },
+    { "required": ["subject"] },
+    { "required": ["subject_public_key_algorithm"] },
+    { "required": ["subject_public_key_modulus"] },
+    { "required": ["subject_public_key_exponent"] },
+    { "required": ["x509_v3_extensions"] }
   ],
   "definitions": {
     "x509-v3-extensions-type": {

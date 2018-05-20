@@ -4,18 +4,10 @@
   "title": "process",
   "description": "The Process Object represents common properties of an instance of a computer program as executed on an operating system.",
   "type": "object",
-  "allOf": [
-    {
-      "$ref": "../common/cyber-observable-core.json"
-    },
-    {
-      "properties": {
+  "properties": {
         "type": {
           "type": "string",
-          "description": "The value of this property MUST be `process`.",
-          "enum": [
-            "process"
-          ]
+          "description": "The value of this property MUST be `process`."
         },
         "extensions": {
           "$ref": "#/definitions/process-extensions-dictionary",
@@ -86,9 +78,8 @@
           },
           "minItems": 1
         }
-      }
-    },
-    {
+      },
+
       "anyOf": [
         { "required": ["extensions"] },
         { "required": ["is_hidden"] },
@@ -104,9 +95,7 @@
         { "required": ["binary_ref"] },
         { "required": ["parent_ref"] },
         { "required": ["child_refs"] }
-      ]
-    }
-  ],
+      ],
   "definitions": {
     "process-extensions-dictionary": {
       "type": "object",

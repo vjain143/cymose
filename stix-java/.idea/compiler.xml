@@ -3,7 +3,6 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="fe2stix2" target="1.5" />
-      <module name="stix-data" target="1.5" />
       <module name="stix-java" target="1.5" />
       <module name="stix-model" target="1.5" />
     </bytecodeTargetLevel>

@@ -4,18 +4,10 @@
   "title": "user-account",
   "description": "The User Account Object represents an instance of any type of user account, including but not limited to operating system, device, messaging service, and social media platform accounts.",
   "type": "object",
-  "allOf": [
-    {
-      "$ref": "../common/cyber-observable-core.json"
-    },
-    {
-      "properties": {
+  "properties": {
         "type": {
           "type": "string",
-          "description": "The value of this property MUST be `user-account`.",
-          "enum": [
-            "user-account"
-          ]
+          "description": "The value of this property MUST be `user-account`."
         },
         "extensions": {
           "$ref": "#/definitions/user-account-extensions-dictionary",
@@ -73,9 +65,7 @@
           "$ref": "../common/timestamp.json",
           "description": "Specifies when the account was last accessed."
         }
-      }
-    }
-  ],
+      },
   "required": [
     "user_id"
   ],

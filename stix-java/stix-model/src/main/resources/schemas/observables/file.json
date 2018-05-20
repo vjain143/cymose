@@ -4,80 +4,70 @@
   "title": "file",
   "description": "The File Object represents the properties of a file.",
   "type": "object",
-  "allOf": [
-    {
-      "$ref": "../common/cyber-observable-core.json"
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "The value of this property MUST be `file`."
     },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "description": "The value of this property MUST be `file`.",
-          "enum": [
-            "file"
-          ]
-        },
-        "extensions": {
-          "$ref": "#/definitions/file-extensions-dictionary",
-          "description": "The File Object defines the following extensions. In addition to these, producers MAY create their own. Extensions: ntfs-ext, raster-image-ext, pdf-ext, archive-ext, windows-pebinary-ext"
-        },
-        "hashes": {
-          "$ref": "../common/hashes-type.json",
-          "description": "Specifies a dictionary of hashes for the file."
-        },
-        "size": {
-          "type": "integer",
-          "minimum": 0,
-          "description": "Specifies the size of the file, in bytes, as a non-negative integer."
-        },
-        "name": {
-          "type": "string",
-          "description": "Specifies the name of the file."
-        },
-        "name_enc": {
-          "type": "string",
-          "pattern": "^[a-zA-Z0-9/\\.+_:-]{2,250}$",
-          "description": "Specifies the observed encoding for the name of the file."
-        },
-        "magic_number_hex": {
-          "$ref": "../common/hex.json",
-          "description": "Specifies the hexadecimal constant ('magic number') associated with a specific file format that corresponds to the file, if applicable."
-        },
-        "mime_type": {
-          "type": "string",
-          "description": "Specifies the MIME type name specified for the file, e.g., 'application/msword'."
-        },
-        "created": {
-          "$ref": "../common/timestamp.json",
-          "description": "Specifies the date/time the file was created."
-        },
-        "modified": {
-          "$ref": "../common/timestamp.json",
-          "description": "Specifies the date/time the file was last written to/modified."
-        },
-        "accessed": {
-          "$ref": "../common/timestamp.json",
-          "description": "Specifies the date/time the file was last accessed."
-        },
-        "parent_directory_ref": {
-          "type": "string",
-          "description": "Specifies the parent directory of the file, as a reference to a Directory Object."
-        },
-        "contains_refs": {
-          "type": "array",
-          "description": "Specifies a list of references to other Observable Objects contained within the file.",
-          "items": {
-            "type": "string"
-          },
-          "minItems": 1
-        },
-        "content_ref": {
-          "type": "string",
-          "description": "Specifies the content of the file, represented as an Artifact Object."
-        }
-      }
+    "extensions": {
+      "$ref": "#/definitions/file-extensions-dictionary",
+      "description": "The File Object defines the following extensions. In addition to these, producers MAY create their own. Extensions: ntfs-ext, raster-image-ext, pdf-ext, archive-ext, windows-pebinary-ext"
+    },
+    "hashes": {
+      "$ref": "../common/hashes-type.json",
+      "description": "Specifies a dictionary of hashes for the file."
+    },
+    "size": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Specifies the size of the file, in bytes, as a non-negative integer."
+    },
+    "name": {
+      "type": "string",
+      "description": "Specifies the name of the file."
+    },
+    "name_enc": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9/\\.+_:-]{2,250}$",
+      "description": "Specifies the observed encoding for the name of the file."
+    },
+    "magic_number_hex": {
+      "$ref": "../common/hex.json",
+      "description": "Specifies the hexadecimal constant ('magic number') associated with a specific file format that corresponds to the file, if applicable."
+    },
+    "mime_type": {
+      "type": "string",
+      "description": "Specifies the MIME type name specified for the file, e.g., 'application/msword'."
+    },
+    "created": {
+      "$ref": "../common/timestamp.json",
+      "description": "Specifies the date/time the file was created."
+    },
+    "modified": {
+      "$ref": "../common/timestamp.json",
+      "description": "Specifies the date/time the file was last written to/modified."
+    },
+    "accessed": {
+      "$ref": "../common/timestamp.json",
+      "description": "Specifies the date/time the file was last accessed."
+    },
+    "parent_directory_ref": {
+      "type": "string",
+      "description": "Specifies the parent directory of the file, as a reference to a Directory Object."
+    },
+    "contains_refs": {
+      "type": "array",
+      "description": "Specifies a list of references to other Observable Objects contained within the file.",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "content_ref": {
+      "type": "string",
+      "description": "Specifies the content of the file, represented as an Artifact Object."
     }
-  ],
+  },
   "oneOf": [
     {
       "$ref": "#/definitions/isEncrypted"

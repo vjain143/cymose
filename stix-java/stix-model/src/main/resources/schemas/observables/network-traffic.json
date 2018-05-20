@@ -4,112 +4,102 @@
   "title": "network-traffic",
   "description": "The Network Traffic Object represents arbitrary network traffic that originates from a source and is addressed to a destination.",
   "type": "object",
-  "allOf": [
-    {
-      "$ref": "../common/cyber-observable-core.json"
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "The value of this property MUST be `network-traffic`."
     },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "description": "The value of this property MUST be `network-traffic`.",
-          "enum": [
-            "network-traffic"
-          ]
-        },
-        "extensions": {
-          "$ref": "#/definitions/network-traffic-extensions-dictionary",
-          "description": "The Network Traffic Object defines the following extensions. In addition to these, producers MAY create their own. Extensions: http-ext, tcp-ext, icmp-ext, socket-ext"
-        },
-        "start": {
-          "$ref": "../common/timestamp.json",
-          "description": "Specifies the date/time the network traffic was initiated, if known."
-        },
-        "end": {
-          "$ref": "../common/timestamp.json",
-          "description": "Specifies the date/time the network traffic ended, if known."
-        },
-        "src_ref": {
-          "type": "string",
-          "description": "Specifies the source of the network traffic, as a reference to one or more Observable Objects."
-        },
-        "dst_ref": {
-          "type": "string",
-          "description": "Specifies the destination of the network traffic, as a reference to one or more Observable Objects."
-        },
-        "src_port": {
-          "type": "integer",
-          "description": "Specifies the source port used in the network traffic, as an integer. The port value MUST be in the range of 0 - 65535.",
-          "minimum": 0,
-          "maximum": 65535
-        },
-        "dst_port": {
-          "type": "integer",
-          "description": "Specifies the destination port used in the network traffic, as an integer. The port value MUST be in the range of 0 - 65535.",
-          "minimum": 0,
-          "maximum": 65535
-        },
-        "protocols": {
-          "type": "array",
-          "description": "Specifies the protocols observed in the network traffic, along with their corresponding state.",
-          "items": {
-            "type": "string"
-          },
-          "minItems": 1
-        },
-        "src_byte_count": {
-          "type": "integer",
-          "description": "Specifies the number of bytes sent from the source to the destination."
-        },
-        "dst_byte_count": {
-          "type": "integer",
-          "description": "Specifies the number of bytes sent from the destination to the source."
-        },
-        "src_packets": {
-          "type": "integer",
-          "description": "Specifies the number of packets sent from the source to the destination."
-        },
-        "dst_packets": {
-          "type": "integer",
-          "description": "Specifies the number of packets sent destination to the source."
-        },
-        "ipfix": {
-          "type": "object",
-          "patternProperties": {
-            "^[a-zA-Z0-9_-]{3,256}$": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "integer"
-                }
-              ]
+    "extensions": {
+      "$ref": "#/definitions/network-traffic-extensions-dictionary",
+      "description": "The Network Traffic Object defines the following extensions. In addition to these, producers MAY create their own. Extensions: http-ext, tcp-ext, icmp-ext, socket-ext"
+    },
+    "start": {
+      "$ref": "../common/timestamp.json",
+      "description": "Specifies the date/time the network traffic was initiated, if known."
+    },
+    "end": {
+      "$ref": "../common/timestamp.json",
+      "description": "Specifies the date/time the network traffic ended, if known."
+    },
+    "src_ref": {
+      "type": "string",
+      "description": "Specifies the source of the network traffic, as a reference to one or more Observable Objects."
+    },
+    "dst_ref": {
+      "type": "string",
+      "description": "Specifies the destination of the network traffic, as a reference to one or more Observable Objects."
+    },
+    "src_port": {
+      "type": "integer",
+      "description": "Specifies the source port used in the network traffic, as an integer. The port value MUST be in the range of 0 - 65535.",
+      "minimum": 0,
+      "maximum": 65535
+    },
+    "dst_port": {
+      "type": "integer",
+      "description": "Specifies the destination port used in the network traffic, as an integer. The port value MUST be in the range of 0 - 65535.",
+      "minimum": 0,
+      "maximum": 65535
+    },
+    "protocols": {
+      "type": "array",
+      "description": "Specifies the protocols observed in the network traffic, along with their corresponding state.",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "src_byte_count": {
+      "type": "integer",
+      "description": "Specifies the number of bytes sent from the source to the destination."
+    },
+    "dst_byte_count": {
+      "type": "integer",
+      "description": "Specifies the number of bytes sent from the destination to the source."
+    },
+    "src_packets": {
+      "type": "integer",
+      "description": "Specifies the number of packets sent from the source to the destination."
+    },
+    "dst_packets": {
+      "type": "integer",
+      "description": "Specifies the number of packets sent destination to the source."
+    },
+    "ipfix": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9_-]{3,256}$": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "integer"
             }
-          }
-        },
-        "src_payload_ref": {
-          "type": "string",
-          "description": "Specifies the bytes sent from the source to the destination."
-        },
-        "dst_payload_ref": {
-          "type": "string",
-          "description": "Specifies the bytes sent from the source to the destination."
-        },
-        "encapsulates_refs": {
-          "type": "array",
-          "description": "Links to other network-traffic objects encapsulated by a network-traffic.",
-          "items": {
-            "type": "string"
-          }
-        },
-        "encapsulated_by_ref": {
-          "type": "string",
-          "description": "Links to another network-traffic object which encapsulates this object."
+          ]
         }
       }
+    },
+    "src_payload_ref": {
+      "type": "string",
+      "description": "Specifies the bytes sent from the source to the destination."
+    },
+    "dst_payload_ref": {
+      "type": "string",
+      "description": "Specifies the bytes sent from the source to the destination."
+    },
+    "encapsulates_refs": {
+      "type": "array",
+      "description": "Links to other network-traffic objects encapsulated by a network-traffic.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "encapsulated_by_ref": {
+      "type": "string",
+      "description": "Links to another network-traffic object which encapsulates this object."
     }
-  ],
+  },
   "required": [
     "protocols"
   ],

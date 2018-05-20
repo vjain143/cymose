@@ -4,18 +4,10 @@
   "title": "software",
   "description": "The Software Object represents high-level properties associated with software, including software products.",
   "type": "object",
-  "allOf": [
-    {
-      "$ref": "../common/cyber-observable-core.json"
-    },
-    {
-      "properties": {
+  "properties": {
         "type": {
           "type": "string",
-          "description": "The value of this property MUST be `software`.",
-          "enum": [
-            "software"
-          ]
+          "description": "The value of this property MUST be `software`."
         },
         "name": {
           "type": "string",
@@ -43,9 +35,7 @@
           "type": "string",
           "description": "Specifies the version of the software."
         }
-      }
-    }
-  ],
+      },
   "required": [
     "name"
   ]

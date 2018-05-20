@@ -4,78 +4,68 @@
   "title": "email-message",
   "description": "The Email Message Object represents an instance of an email message.",
   "type": "object",
-  "allOf": [
-    {
-      "$ref": "../common/cyber-observable-core.json"
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "The value of this property MUST be `email-message`."
     },
-    {
-      "properties": {
-        "type": {
-          "type": "string",
-          "description": "The value of this property MUST be `email-message`.",
-          "enum": [
-            "email-message"
-          ]
-        },
-        "date": {
-          "$ref": "../common/timestamp.json",
-          "description": "Specifies the date/time that the email message was sent."
-        },
-        "content_type": {
-          "type": "string",
-          "description": "Specifies the value of the 'Content-Type' header of the email message."
-        },
-        "from_ref": {
-          "type": "string",
-          "description": "Specifies the value of the 'From:' header of the email message."
-        },
-        "sender_ref": {
-          "type": "string",
-          "description": "Specifies the value of the 'From' field of the email message"
-        },
-        "to_refs": {
-          "type": "array",
-          "description": "Specifies the mailboxes that are 'To:' recipients of the email message",
-          "items": {
-            "type": "string"
-          }
-        },
-        "cc_refs": {
-          "type": "array",
-          "description": "Specifies the mailboxes that are 'CC:' recipients of the email message",
-          "items": {
-            "type": "string"
-          }
-        },
-        "bcc_refs": {
-          "type": "array",
-          "description": "Specifies the mailboxes that are 'BCC:' recipients of the email message.",
-          "items": {
-            "type": "string"
-          }
-        },
-        "subject": {
-          "type": "string",
-          "description": "Specifies the subject of the email message."
-        },
-        "received_lines": {
-          "type": "array",
-          "description": "Specifies one or more Received header fields that may be included in the email headers.",
-          "items": {
-            "type": "string"
-          }
-        },
-        "additional_header_fields": {
-          "$ref": "#/definitions/email-additional-header-fields",
-          "description": "Specifies any other header fields found in the email message, as a dictionary."
-        },
-        "raw_email_ref": {
-          "type": "string",
-          "description": "Specifies the raw binary contents of the email message, including both the headers and body, as a reference to an Artifact Object."
-        }
+    "date": {
+      "$ref": "../common/timestamp.json",
+      "description": "Specifies the date/time that the email message was sent."
+    },
+    "content_type": {
+      "type": "string",
+      "description": "Specifies the value of the 'Content-Type' header of the email message."
+    },
+    "from_ref": {
+      "type": "string",
+      "description": "Specifies the value of the 'From:' header of the email message."
+    },
+    "sender_ref": {
+      "type": "string",
+      "description": "Specifies the value of the 'From' field of the email message"
+    },
+    "to_refs": {
+      "type": "array",
+      "description": "Specifies the mailboxes that are 'To:' recipients of the email message",
+      "items": {
+        "type": "string"
       }
+    },
+    "cc_refs": {
+      "type": "array",
+      "description": "Specifies the mailboxes that are 'CC:' recipients of the email message",
+      "items": {
+        "type": "string"
+      }
+    },
+    "bcc_refs": {
+      "type": "array",
+      "description": "Specifies the mailboxes that are 'BCC:' recipients of the email message.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "subject": {
+      "type": "string",
+      "description": "Specifies the subject of the email message."
+    },
+    "received_lines": {
+      "type": "array",
+      "description": "Specifies one or more Received header fields that may be included in the email headers.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "additional_header_fields": {
+      "$ref": "#/definitions/email-additional-header-fields",
+      "description": "Specifies any other header fields found in the email message, as a dictionary."
+    },
+    "raw_email_ref": {
+      "type": "string",
+      "description": "Specifies the raw binary contents of the email message, including both the headers and body, as a reference to an Artifact Object."
     }
-  ],
+  },
   "oneOf": [
     {
       "properties": {
