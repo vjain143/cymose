@@ -3,6 +3,8 @@ package com.cymose.stix.sdk.model.sros;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import com.cymose.stix.sdk.model.common.Core;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -30,7 +32,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
     "source_ref",
     "target_ref"
 })
-public class Relationship {
+public class Relationship extends Core {
 
     /**
      * The type of this object, which MUST be the literal `relationship`.

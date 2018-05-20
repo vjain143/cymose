@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.cymose.stix.sdk.model.common.Core;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -35,7 +37,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
     "where_sighted_refs",
     "summary"
 })
-public class Sighting {
+public class Sighting extends Core {
 
     /**
      * The type of this object, which MUST be the literal `sighting`.

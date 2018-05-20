@@ -16,160 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NetworkTraffic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/NetworkTraffic.java">
+      <file leaf-file-name="Relationship.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/sros/Relationship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3588">
-              <caret line="284" column="7" lean-forward="true" selection-start-line="284" selection-start-column="7" selection-end-line="284" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7012#7013#0" expanded="true" />
-                <element signature="e#7045#7046#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="315">
+              <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Software.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/Software.java">
+      <file leaf-file-name="Sighting.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/sros/Sighting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="36" column="49" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserAccount.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/UserAccount.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="53" column="55" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
-              <folding>
-                <element signature="e#7019#7020#0" expanded="true" />
-                <element signature="e#7052#7053#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Value.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/Value.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WindowsRegistryKey.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/WindowsRegistryKey.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2558">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="X509Certificate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/X509Certificate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="43" column="56" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
-              <folding>
-                <element signature="e#5719#5720#0" expanded="true" />
-                <element signature="e#5746#5747#0" expanded="true" />
-                <element signature="e#5898#5899#0" expanded="true" />
-                <element signature="e#5930#5931#0" expanded="true" />
-                <element signature="e#6162#6163#0" expanded="true" />
-                <element signature="e#6197#6198#0" expanded="true" />
-                <element signature="e#6446#6447#0" expanded="true" />
-                <element signature="e#6494#6495#0" expanded="true" />
-                <element signature="e#6658#6659#0" expanded="true" />
-                <element signature="e#6687#6688#0" expanded="true" />
-                <element signature="e#6862#6863#0" expanded="true" />
-                <element signature="e#6898#6899#0" expanded="true" />
-                <element signature="e#7042#7043#0" expanded="true" />
-                <element signature="e#7072#7073#0" expanded="true" />
-                <element signature="e#7228#7229#0" expanded="true" />
-                <element signature="e#7266#7267#0" expanded="true" />
-                <element signature="e#7471#7472#0" expanded="true" />
-                <element signature="e#7506#7507#0" expanded="true" />
-                <element signature="e#7728#7729#0" expanded="true" />
-                <element signature="e#7776#7777#0" expanded="true" />
-                <element signature="e#7959#7960#0" expanded="true" />
-                <element signature="e#8000#8001#0" expanded="true" />
-                <element signature="e#8206#8207#0" expanded="true" />
-                <element signature="e#8266#8267#0" expanded="true" />
-                <element signature="e#8435#8436#0" expanded="true" />
-                <element signature="e#8464#8465#0" expanded="true" />
-                <element signature="e#8644#8645#0" expanded="true" />
-                <element signature="e#8680#8681#0" expanded="true" />
-                <element signature="e#8960#8961#0" expanded="true" />
-                <element signature="e#9000#9001#0" expanded="true" />
-                <element signature="e#9302#9303#0" expanded="true" />
-                <element signature="e#9360#9361#0" expanded="true" />
-                <element signature="e#9638#9639#0" expanded="true" />
-                <element signature="e#9677#9678#0" expanded="true" />
-                <element signature="e#9976#9977#0" expanded="true" />
-                <element signature="e#10032#10033#0" expanded="true" />
-                <element signature="e#10249#10250#0" expanded="true" />
-                <element signature="e#10279#10280#0" expanded="true" />
-                <element signature="e#10508#10509#0" expanded="true" />
-                <element signature="e#10546#10547#0" expanded="true" />
-                <element signature="e#10769#10770#0" expanded="true" />
-                <element signature="e#10817#10818#0" expanded="true" />
-                <element signature="e#11336#11337#0" expanded="true" />
-                <element signature="e#11382#11383#0" expanded="true" />
-                <element signature="e#11883#11884#0" expanded="true" />
-                <element signature="e#11930#11931#0" expanded="true" />
-                <element signature="e#12335#12336#0" expanded="true" />
-                <element signature="e#12374#12375#0" expanded="true" />
-                <element signature="e#12488#12489#0" expanded="true" />
-                <element signature="e#12544#12545#0" expanded="true" />
-                <element signature="e#12623#12624#0" expanded="true" />
-                <element signature="e#12671#12672#0" expanded="true" />
-                <element signature="e#12758#12759#0" expanded="true" />
-                <element signature="e#12816#12817#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Url.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/Url.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Process.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/Process.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="X509V3Extensions.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/X509V3Extensions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Extensions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/Extensions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="18" column="23" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="23" />
+            <state relative-caret-position="345">
+              <caret line="38" column="2" lean-forward="true" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -210,9 +70,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/stix-model/src/main/resources/schemas/observables/file.json" />
-        <option value="$PROJECT_DIR$/stix-model/src/main/resources/schemas/observables/ipv4-addr.json" />
-        <option value="$PROJECT_DIR$/stix-model/src/main/resources/schemas/observables/ipv6-addr.json" />
         <option value="$PROJECT_DIR$/stix-model/src/main/resources/schemas/observables/mac-addr.json" />
         <option value="$PROJECT_DIR$/stix-model/src/main/resources/schemas/observables/mutex.json" />
         <option value="$PROJECT_DIR$/stix-model/src/main/resources/schemas/observables/network-traffic.json" />
@@ -261,6 +118,9 @@
         <option value="$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/WindowsRegistryKey.java" />
         <option value="$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/X509Certificate.java" />
         <option value="$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/X509V3Extensions.java" />
+        <option value="$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/common/Core.java" />
+        <option value="$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/sros/Relationship.java" />
+        <option value="$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/sros/Sighting.java" />
       </list>
     </option>
   </component>
@@ -356,7 +216,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="observables" type="462c0819:PsiDirectoryNode" />
+              <item name="sdos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="stix-java" type="b2602c69:ProjectViewProjectNode" />
@@ -366,7 +226,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="sdos" type="462c0819:PsiDirectoryNode" />
+              <item name="sros" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="stix-java" type="b2602c69:ProjectViewProjectNode" />
@@ -414,6 +274,16 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="schemas" type="462c0819:PsiDirectoryNode" />
               <item name="sdos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stix-java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stix-java" type="462c0819:PsiDirectoryNode" />
+              <item name="stix-model" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="schemas" type="462c0819:PsiDirectoryNode" />
+              <item name="sros" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -638,34 +508,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stix-model/src/main/resources/schemas/common/bundle.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="83" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stix-model/src/main/resources/schemas/common/core.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stix-model/src/main/resources/schemas/common/granular-marking.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stix-model/src/main/resources/schemas/observables/artifact.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="69" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stix-model/src/main/resources/schemas/observables/email-addr.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -708,13 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/sdos/AttackPattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -802,13 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/common/Bundle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="56" column="31" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -961,23 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/Value.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/WindowsRegistryKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2558">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/X509Certificate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -1045,6 +856,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/WindowsRegistryKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/observables/Value.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/sdos/AttackPattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="62" column="72" lean-forward="true" selection-start-line="62" selection-start-column="72" selection-end-line="62" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/common/Core.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="336" column="5" selection-start-line="336" selection-start-column="5" selection-end-line="336" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/common/Bundle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="34" column="19" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stix-model/src/main/resources/schemas/sros/relationship.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/sros/Relationship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stix-model/src/main/java/com/cymose/stix/sdk/model/sros/Sighting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="38" column="2" lean-forward="true" selection-start-line="38" selection-start-column="2" selection-end-line="38" selection-end-column="2" />
         </state>
       </provider>
     </entry>

@@ -146,7 +146,7 @@ public class Core {
      * 
      */
     @JsonProperty("id")
-    public String getId() {
+    public Object getId() {
         return id;
     }
 
